@@ -9,8 +9,7 @@ export function style() {
   "bg-white",
   "dark:bg-slate-800",
   "text-black",
-  "dark:text-white",
-  "relative"
+  "dark:text-white"
  );
  d.querySelector("header").classList.add("min-h-screen");
 
