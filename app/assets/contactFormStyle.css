@@ -1,0 +1,115 @@
+/********Contact Form **********/
+body {
+ background-color: #fffbeb;
+}
+.form-container {
+ position: fixed;
+ display: block;
+ top: 0px;
+ width: 100%;
+ background-color: white;
+}
+.contact-form {
+ --form-ok-color: #b45309;
+ --form-error-color: red;
+ margin-left: auto;
+ margin-right: auto;
+ width: 70%;
+ height: 150vh;
+ /*selecciona los inputs que tengan el tipo submit*/
+ /*pseudoelemento placeholder dentro de todos los hijos de .contact-form*/
+ /*todos los que tengan atributo required dentro de .contact-form que cuenten con el pseudo clase 'valid'*/
+ /*La pseudo clase valid se encuentra en los elementos del formulario que sean validos.*/
+}
+.contact-form > * {
+ padding: 0.5rem;
+ margin: 1rem auto;
+ display: block;
+ width: 100%;
+ font-family: "Poppins", sans-serif;
+}
+.contact-form textarea {
+ resize: none;
+}
+.contact-form legend,
+.contact-form-response {
+ font-size: 2rem;
+ font-weight: bold;
+ text-align: center;
+ padding-top: 5rem;
+ color: #b45309;
+ font-family: "Source Serif Pro", serif;
+}
+.contact-form > * {
+ font-family: sans-serif;
+ font-size: 1rem;
+}
+.contact-form input[type="submit"] {
+ width: min(12rem, 40%);
+ font-weight: bold;
+ cursor: pointer;
+ box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.558);
+ color: #fffffffb;
+ background-color: #bf753d;
+}
+.contact-form input[type="submit"]:hover {
+ color: #bf753d;
+ background-color: #fffffffb;
+}
+.contact-form *::-moz-placeholder {
+ color: black;
+}
+.contact-form *:-ms-input-placeholder {
+ color: black;
+}
+.contact-form *::placeholder {
+ color: black;
+}
+.contact-form [required]:valid {
+ border: thin solid var(--form-ok-color);
+}
+.contact-form [required]:invalid {
+ border: thin solid var(--form-error-color);
+}
+.contact-form [required]:focus {
+ outline: none;
+ box-shadow: inset 0 0 2px 0 rgb(110, 110, 110);
+}
+.contact-form-error {
+ margin-top: -1rem;
+ font-size: 80%;
+ background-color: var(--form-error-color);
+ color: white;
+ transition: all 800ms ease;
+}
+.contact-form-error.is-active {
+ display: block;
+ -webkit-animation: show-message 1s 1 normal 0s ease-out both;
+ animation: show-message 1s 1 normal 0s ease-out both;
+}
+
+.none {
+ display: none;
+}
+
+@-webkit-keyframes show-message {
+ 0% {
+  visibility: hidden;
+  opacity: 0;
+ }
+ 100% {
+  visibility: visible;
+  opacity: 1;
+ }
+}
+
+@keyframes show-message {
+ 0% {
+  visibility: hidden;
+  opacity: 0;
+ }
+ 100% {
+  visibility: visible;
+  opacity: 1;
+ }
+}
