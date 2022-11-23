@@ -7,7 +7,7 @@ export function header() {
  let $header = d.querySelector("header");
  $header.classList.add(
   "bg-[url('https://images.unsplash.com/photo-1576014131795-d440191a8e8b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80')]",
-  "min-h-[max(100vh,40rem)]",
+  "min-h-[max(100vh,20rem)]",
   "bg-no-repeat",
   "bg-cover",
   "bg-center",
